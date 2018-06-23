@@ -5,7 +5,7 @@ namespace FileScanner.UI
 {
     public partial class Form1 : Form
     {
-        private FileScanResult scanResult;
+        private FileScanResult _scanResult;
         
         public Form1()
         {
@@ -14,14 +14,14 @@ namespace FileScanner.UI
 
         private async void btnScan_Click(object sender, EventArgs e)
         {
-            scanResult = new FileScanResult();
+            _scanResult = new FileScanResult();
             chkShowLog.Enabled = false;
             txtLog.Text = "scanning in progress...";
-            await FileScanner.ScanFolderForFilesAsync(txtPath.Text, scanResult);
+            await FileScanner.ScanFolderForFilesAsync(txtPath.Text, _scanResult);
             chkShowLog.Enabled = true;
             if (chkShowLog.Checked)
             {
-                txtLog.Text = scanResult.Log.ToString();
+                txtLog.Text = _scanResult.Log.ToString();
             }
             else
             {
@@ -32,9 +32,9 @@ namespace FileScanner.UI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (scanResult != null)
+            if (_scanResult != null)
             {
-                Clipboard.SetText(scanResult.Log.ToString());
+                Clipboard.SetText(_scanResult.Log.ToString());
             }
         }
     }

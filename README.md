@@ -16,5 +16,5 @@ It consists of a class library and a little winform application which to exercis
 
 ## Technologies
 
-- Visual Studio 2012
+- Visual Studio 2013
 - .NET Framework 4.5
