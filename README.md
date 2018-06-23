@@ -8,7 +8,7 @@ In `original` branch you will find the original source code for this application
 
 For a side project (ISO Finder and some others) I ended implementing a file system scanner which also read some specific file properties. At that moment I decided to separate it in order to reuse this code.
 
-It consists of a class library and a little winform application which to exercise it.
+It consists of a class library and a little winform application to exercise it.
 
 ## Screenshot
 
