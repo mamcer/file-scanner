@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace FileScanner.UI
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         private FileScanResult scanResult;
         
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
